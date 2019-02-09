@@ -1,0 +1,46 @@
+{
+  "root": true,
+
+  "parserOptions": {
+    // "parser": "babel-eslint",
+    "sourceType": "module",
+    "ecmaVersion": 2018
+  },
+
+  "plugins": ["import", "unicorn"],
+
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/warnings",
+    "plugin:import/errors",
+    "plugin:unicorn/recommended",
+    "prettier",
+    // "prettier/babel",
+    "prettier/unicorn"
+  ],
+
+  "env": {
+    "es6": true,
+    "node": true
+  },
+
+  "rules": {
+    "no-console": "off",
+    // unicorn
+    "unicorn/no-process-exit": "off"
+  },
+
+  "overrides": [
+    {
+      "files": ["src/mocha/**/*.spec.js", "src/mocha-webpack/**/*.spec.js"],
+      "env": { "mocha": true }
+    },
+    {
+      "files": ["src/jest/**/*.spec.js"],
+      "env": {
+        "jest": true
+        // "jest/globals": true
+      }
+    }
+  ]
+}

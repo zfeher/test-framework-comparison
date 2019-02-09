@@ -1,0 +1,49 @@
+{
+  "name": "test-framework-comparison",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:mocha": "cross-env NUMBER_OF_TESTS_PER_FILE=1000 mocha --require @babel/register \"src/mocha/**/*.spec.js\"",
+    "test:mocha:error": "cross-env LOG_ERROR=true npm run test:mocha",
+    "test:mocha:fail": "cross-env FAIL_TESTS=true npm run test:mocha",
+    "test:mocha:async": "cross-env ASYNC_TESTS=true npm run test:mocha",
+    "test:mochawp": "cross-env NUMBER_OF_TESTS_PER_FILE=1000 mocha-webpack --webpack-config webpack.config-mocha.js \"src/mocha/**/*.spec.js\"",
+    "test:mochawp:error": "cross-env LOG_ERROR=true npm run test:mochawp",
+    "test:mochawp:fail": "cross-env FAIL_TESTS=true npm run test:mochawp",
+    "test:mochawp:async": "cross-env ASYNC_TESTS=true npm run test:mochawp",
+    "test:jest": "cross-env NUMBER_OF_TESTS_PER_FILE=1000 jest",
+    "test:jest:error": "cross-env LOG_ERROR=true npm run test:jest",
+    "test:jest:fail": "cross-env FAIL_TESTS=true npm run test:jest",
+    "test:jest:async": "cross-env ASYNC_TESTS=true npm run test:jest",
+    "test:ava": "cross-env NUMBER_OF_TESTS_PER_FILE=1000 ava",
+    "test:ava:error": "cross-env LOG_ERROR=true npm run test:ava",
+    "test:ava:fail": "cross-env FAIL_TESTS=true npm run test:ava",
+    "test:ava:async": "cross-env ASYNC_TESTS=true npm run test:ava"
+  },
+  "browserslist": [
+    "current node"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/register": "^7.0.0",
+    "ava": "^1.2.1",
+    "babel-loader": "^8.0.5",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.13.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-unicorn": "^7.1.0",
+    "jest": "^24.1.0",
+    "jest-silent-reporter": "^0.1.1",
+    "mocha": "^5.2.0",
+    "mocha-webpack": "^2.0.0-beta.0",
+    "prettier": "^1.16.4",
+    "webpack": "^4.29.3",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
