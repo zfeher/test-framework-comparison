@@ -7,7 +7,7 @@ module.exports = {
   // "<rootDir>/.vscode",
   // ],
   // testEnvironment: 'jsdom',
-  testEnvironment: "node",
+  // testEnvironment: "node",
   // testPathIgnorePatterns: [
   //   "/node_modules/",
   //   "<rootDir>/.tmp",
