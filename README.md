@@ -60,15 +60,20 @@ sys     0m0.167s
 
 ## results (Core i7 3770 4 cores/8 thread)
 
-| 100 file * 7 test | normal |  error |     fail |
-| ----------------: | -----: | -----: | -------: |
-|           **AVA** | 19.18s | 21.69s |   22.92s |
-|          **Jest** | 12.97s | 15.04s | 1m15.22s |
-| **Jest: silent*** | 12.33s | 13.81s |   13.06s |
-|   **Jest: node*** | 11.20s | 13.37s |        - |
-|         **Mocha** |  3.10s |  6.00s |    5.18s |
-| **Mocha-Webpack** |  4.54s | 25.42s |   24.88s |
+|      100 file * 7 test | normal |  error |     fail |
+| ---------------------: | -----: | -----: | -------: |
+|                **AVA** | 19.18s | 21.69s |   22.92s |
+|               **Jest** | 12.97s | 15.04s | 1m15.22s |
+|      **Jest: silent*** | 12.33s | 13.81s |   13.06s |
+|        **Jest: node*** | 11.20s | 13.37s |        - |
+|              **Mocha** |  3.10s |  6.00s |    5.18s |
+|      **Mocha-Webpack** |  4.54s | 25.42s |   24.88s |
+| **Mocha-Webpack: min** |  4.18s | 25.19s |   22.88s |
 
 **NOTE:** *Jest: silent* means that we used **jest-silent-reporter**
 
 **NOTE:** *Jest: node* means that we set the test env to **node**
+
+**NOTE:** *JMocha-Webpack: min* means that we set used **min** reporter
+
+**TODO:** add `console` hacked measurements
